@@ -2,12 +2,14 @@ create database validades;
 
 use validades;
 
-create table validades.user (
-	id_usuario int primary key auto_increment,
-    name varchar(255) not null,
-    email varchar(255) not null,
-    nickName varchar(255) not null,
-    password varchar(255) not null
+CREATE TABLE validades.user (
+	id int(10) PRIMARY KEY auto_increment,
+	name varchar(200),
+	email varchar(200),
+	password varchar(256),
+    type_user varchar(50) DEFAULT "USER",
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP    
 );
 
 create table validades.produtos (  
