@@ -10,5 +10,7 @@ router.get('/home', indexController.showHome);
 router.get('/usuarios', UserController.index);
 router.get('/usuarios/ver/:id', UserController.findById);
 router.get('/search', UserController.search);
+router.get('/cadastro', UserController.create);
+router.post('/cadastro', UserController.store);
 
 module.exports = router;

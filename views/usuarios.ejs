@@ -13,14 +13,15 @@
   <%- include('components/header') %>
 
     <main class="container mt-4">
+           
       <div class="d-flex justify-content-between">
         <h1>Lista de Usuarios</h1>
-        <form action="/usuarios/search" class="form-inline my-2 my-lg-0" method="get">
-          <input class="form-control mr-sm-2" type="search" placeholder="Pesquise um usuario" aria-label="Search" name="key">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        <form action="/usuarios/search" class="d-flex justify-content-around align-items-center" method="get">
+            <input type="text" class="form-control" placeholder="Pesquise um usuario" name="key">
+            <button type="submit" class="ml-3 btn btn-success">Buscar</button>
         </form>
       </div>
-      
+
       <table class="table">
         <thead>
           <tr>
