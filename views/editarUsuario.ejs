@@ -6,35 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Users</title>
+    <title>Document</title>
 </head>
 <body>
+
+    <%- include('components/header') %> 
     
-  <%- include('components/header') %>
-
     <main class="container mt-4">
-      <h1>Informações de Usuarios</h1>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Email</th>
-            <th scope="col">Senha</th>
-            <th scope="col">Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <th scope="row"><%= user.id %></th>
-              <th><%= user.name %></th>
-              <th><%= user.email %></th>
-              <th><%= user.password %></th>
-
-              <th><a href="/usuarios/editar/<%=user.id%>" class="btn btn-warning">Editar</a></th>
-            </tr>
-        </tbody>
-      </table>
+        <form class="card p-3" action="/usuarios/editar/<%=usuario.id%>?_method=PUT" method="post">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" name="name" value="<%= usuario.name %> ">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" name="email" value="<%= usuario.email %> ">
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="text" class="form-control" id="password" name="password">
+            </div>
+            <button class="btn btn-success" type="submit">Salvar alterações</button>
+        </form>
     </main>
 
 

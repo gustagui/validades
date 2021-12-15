@@ -36,7 +36,13 @@
               <th scope="row"><%= user.id %></th>
               <th><%= user.name %></th>
               <th><%= user.email %></th>
-              <th><a href="/usuarios/ver/<%= user.id %>" class="btn btn-primary">Ver Dados</a></th>
+              <th>
+                <a href="/usuarios/ver/<%=user.id%>" class="btn btn-primary">Ver Dados</a>
+                <a href="/usuarios/editar/<%=user.id%>" class="btn btn-warning">Editar</a>
+                <form action="/usuarios/deletar/<%=user.id%>?_method=DELETE" method="post">
+                  <button type="submit" class="btn btn-danger">Excluir</button>
+                </form>
+              </th>
             </tr>
           <% }); %>
         </tbody>
@@ -44,10 +50,11 @@
 
       <nav aria-label="Page navigation example">
         <ul class="pagination">
-          <% for (let nrPagina = 1; nrPagina <= totalPagina; nrPagina++) { %>
-            <li class="page-item"><a class="page-link" href="?page=<%= nrPagina %>"><%= nrPagina %></a></li>         
-         <% } %>
-        </ul>
+        <% for (let nrPagina = 1; nrPagina <= totalPagina; nrPagina++) { %>
+          <li class="page-item"><a class="page-link" href="?page=<%=nrPagina %>"><%=nrPagina %></a></li>         
+       <% } %>
+
+      </ul>
       </nav>
 
     </main>
