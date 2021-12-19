@@ -15,10 +15,11 @@
     <main class="container mt-4">
            
       <div class="d-flex justify-content-between">
-        <h1>Lista de Usuarios</h1>
+        <h1>Controle de Promotores</h1>
         <form action="/usuarios/search" class="d-flex justify-content-around align-items-center" method="get">
             <input type="text" class="form-control" placeholder="Pesquise um usuario" name="key">
             <button type="submit" class="ml-3 btn btn-success">Buscar</button>
+            <a href="/addPromotores" class="btn btn-primary">Adicionar</a>
         </form>
       </div>
 
@@ -28,21 +29,20 @@
             <th scope="col">Promotor</th>
             <th scope="col">Entrada</th>
             <th scope="col">Saida</th>
+            <th scope="col">Ações</th>
           </tr>
         </thead>
         <tbody>
+          <% promoters.forEach(promoter => { %>
             <tr>
-              <th scope="row">Bruno (lucky)</th>
-              <th>8:30</th>
-              <th>10:27</th>
+              <th scope="row"><%= promoter.name %> (<%= promoter.empresa %>)</th>
+              <th><%= promoter.entrada %></th>
+              <th><%= promoter.saida %></th>
               <th>
-                <a href="" class="btn btn-primary">Ver Dados</a>
-                <a href="" class="btn btn-warning">Editar</a>
-                <form action="" method="post">
-                  <button type="submit" class="btn btn-danger">Excluir</button>
-                </form>
+                <a href="/promotores/ver/<%=promoter.id%>" class="btn btn-primary">Ver Dados</a>
               </th>
             </tr>
+          <% }); %>
         </tbody>
       </table>
 

@@ -2,7 +2,7 @@ var express = require('express');
 const indexController = require('../controllers/indexController');
 const UserController = require('../controllers/UserController');
 const PromoterController = require('../controllers/PromoterController');
-const ValidadesController = require('../controllers/ValidadesController');
+const DataController = require('../controllers/DataController');
 var router = express.Router();
 
 /* GET home page. */
@@ -22,11 +22,20 @@ router.put('/usuarios/editar/:id', UserController.update);
 
 router.delete('/usuarios/deletar/:id', UserController.destroy);
 
+
+
 // Promoter
-router.get('/promotores', PromoterController.create);
+router.get('/promotores', PromoterController.index);
+router.get('/promotores/ver/:id', PromoterController.findById);
+
+router.get('/addPromotores', PromoterController.create);
+router.post('/addPromotores', PromoterController.store);
+
+
 
 
 // Validades
-router.get('/validades', ValidadesController.create);
+router.get('/validades', DataController.index);
+router.get('/validades/ver/:id', DataController.findById);
 
 module.exports = router;

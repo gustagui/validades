@@ -1,15 +1,16 @@
 module.exports = (sequelize, DataTypes) => {
-    const Promoter = sequelize.define('Promoter', {
+    const Data = sequelize.define('Data', {
         id:{
             type:DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        name: DataTypes.STRING(256),
-        empresa: DataTypes.STRING(256),
-        entrada: DataTypes.STRING(256),
-        saida: DataTypes.STRING(256),
-        observacao: DataTypes.STRING(256),
+        produto: DataTypes.STRING(256),
+        marca: DataTypes.STRING(256),
+        setor: DataTypes.STRING(256),
+        validade: DataTypes.STRING(256),
+        quantidade: DataTypes.STRING(256),
+        valor: DataTypes.STRING(256),
         created_at: {
             type: DataTypes.DATE,          
           },
@@ -17,9 +18,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATE
         },
     },{
-        tableName: 'promoter',
+        tableName: 'datas',
         timestamps: false,
     })
    
-    return Promoter;
+    return Data;
 }

@@ -23,9 +23,21 @@ create table validades.produtos (
 CREATE TABLE validades.promoter (
 	id int(10) PRIMARY KEY auto_increment,
 	name varchar(256),
+	empresa varchar(256),
 	entrada varchar(256),
     saida varchar(256),
     observacao varchar(256),
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP    
+);
+
+CREATE TABLE validades.datas (
+	id int(10) PRIMARY KEY auto_increment,
+	produto varchar(256),
+	marca varchar(256),
+    setor varchar(256),
+    validade varchar(256),
+    valor varchar(256),
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP    
 );

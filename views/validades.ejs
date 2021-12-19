@@ -25,26 +25,26 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Marca</th>
             <th scope="col">Produto</th>
+            <th scope="col">Marca</th>
             <th scope="col">Validade</th>
-            <th scope="col">Valor atual</th>
           </tr>
         </thead>
         <tbody>
+          <% datas.forEach(data => { %>
             <tr>
-              <th scope="row">Nestle</th>
-              <th>Leite integral 1L</th>
-              <th>16/01/2022</th>
-              <th>R$ 6,39</th>
+              <th scope="row"><%= data.produto %></th>
+              <th><%= data.marca %></th>
+              <th><%= data.validade %></th>
               <th>
-                <a href="" class="btn btn-primary">Ver Dados</a>
+                <a href="/validades/ver/<%=data.id%>" class="btn btn-primary">Info.</a>
                 <a href="" class="btn btn-warning">Editar</a>
                 <form action="" method="post">
                   <button type="submit" class="btn btn-danger">Excluir</button>
                 </form>
               </th>
             </tr>
+          <% }); %>
         </tbody>
       </table>
 
