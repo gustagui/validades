@@ -19,3 +19,13 @@ create table validades.produtos (
     quantidade bigint not null,     
     preco varchar(15) 
 );
+
+CREATE TABLE validades.promoter (
+	id int(10) PRIMARY KEY auto_increment,
+	name varchar(256),
+	entrada varchar(256),
+    saida varchar(256),
+    observacao varchar(256),
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP    
+);
