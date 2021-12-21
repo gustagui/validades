@@ -38,4 +38,14 @@ router.post('/addPromotores', PromoterController.store);
 router.get('/validades', DataController.index);
 router.get('/validades/ver/:id', DataController.findById);
 
+router.get('/addData', DataController.create);
+router.post('/addData', DataController.store);
+
+router.get('/validades/editar/:id', DataController.edit);
+router.put('/validades/editar/:id', DataController.update);
+
+router.delete('/validades/deletar/:id', DataController.destroy);
+
+
+
 module.exports = router;

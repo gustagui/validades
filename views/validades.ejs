@@ -15,10 +15,11 @@
     <main class="container mt-4">
            
       <div class="d-flex justify-content-between">
-        <h1>Lista de Usuarios</h1>
+        <h1>Lista de Validades</h1>
         <form action="/usuarios/search" class="d-flex justify-content-around align-items-center" method="get">
             <input type="text" class="form-control" placeholder="Pesquise um usuario" name="key">
             <button type="submit" class="ml-3 btn btn-success">Buscar</button>
+            <a href="/addData" class="btn btn-primary">Adicionar</a>
         </form>
       </div>
 
@@ -38,8 +39,8 @@
               <th><%= data.validade %></th>
               <th>
                 <a href="/validades/ver/<%=data.id%>" class="btn btn-primary">Info.</a>
-                <a href="" class="btn btn-warning">Editar</a>
-                <form action="" method="post">
+                <a href="/validades/editar/<%=data.id%>" class="btn btn-warning">Editar</a>
+                <form action="/validades/deletar/<%=data.id%>?_method=DELETE" method="post">
                   <button type="submit" class="btn btn-danger">Excluir</button>
                 </form>
               </th>
