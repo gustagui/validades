@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         name: DataTypes.STRING(256),
         empresa: DataTypes.STRING(256),
+        dia: DataTypes.STRING(256),
         entrada: DataTypes.STRING(256),
         saida: DataTypes.STRING(256),
         observacao: DataTypes.STRING(256),

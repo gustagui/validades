@@ -27,6 +27,7 @@
         <thead>
           <tr>
             <th scope="col">Promotor</th>
+            <th scope="col">Dia</th>
             <th scope="col">Entrada</th>
             <th scope="col">Saida</th>
             <th scope="col">Ações</th>
@@ -36,6 +37,7 @@
           <% promoters.forEach(promoter => { %>
             <tr>
               <th scope="row"><%= promoter.name %> (<%= promoter.empresa %>)</th>
+              <th><%= promoter.dia %></th>
               <th><%= promoter.entrada %></th>
               <th><%= promoter.saida %></th>
               <th>

@@ -23,11 +23,12 @@ const PromoterController = {
       return res.render('adicionarPromotor')
     },
     store: async (req, res) => {
-      const { name, empresa, entrada, saida, observacao } = req.body;
+      const { name, empresa, dia, entrada, saida, observacao } = req.body;
 
       const resultado = await Promoter.create({
         name, 
-        empresa, 
+        empresa,
+        dia,
         entrada, 
         saida, 
         observacao
