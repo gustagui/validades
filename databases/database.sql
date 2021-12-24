@@ -1,8 +1,8 @@
-create database validades;
+create database heroku_506ea39d50d24bd;
 
-use validades;
+use heroku_506ea39d50d24bd;
 
-CREATE TABLE validades.user (
+CREATE TABLE heroku_506ea39d50d24bd.user (
 	id int(10) PRIMARY KEY auto_increment,
 	name varchar(200),
 	email varchar(200),
@@ -12,7 +12,7 @@ CREATE TABLE validades.user (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP    
 );
 
-create table validades.produtos (  
+create table heroku_506ea39d50d24bd.produtos (  
     id int not null primary key,     
     nome varchar(255) not null,     
     dia varchar(10) not null,     
@@ -20,10 +20,11 @@ create table validades.produtos (
     preco varchar(15) 
 );
 
-CREATE TABLE validades.promoter (
+CREATE TABLE heroku_506ea39d50d24bd.promoter (
 	id int(10) PRIMARY KEY auto_increment,
 	name varchar(256),
 	empresa varchar(256),
+    dia varchar(256),
 	entrada varchar(256),
     saida varchar(256),
     observacao varchar(256),
@@ -31,12 +32,13 @@ CREATE TABLE validades.promoter (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP    
 );
 
-CREATE TABLE validades.datas (
+CREATE TABLE heroku_506ea39d50d24bd.datas (
 	id int(10) PRIMARY KEY auto_increment,
 	produto varchar(256),
 	marca varchar(256),
     setor varchar(256),
     validade varchar(256),
+    quantidade varchar(256),
     valor varchar(256),
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP    

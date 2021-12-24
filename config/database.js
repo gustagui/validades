@@ -1,9 +1,9 @@
 module.exports = {
     development: {
-      username: "root",
-      password: null,
-      database: "validades",
-      host: "localhost",
+      username: "be1d456ac82cd3",
+      password: "ad404816",
+      database: "heroku_506ea39d50d24bd",
+      host: "us-cdbr-east-05.cleardb.net",
       dialect: "mysql"
     },
     test: {
@@ -17,7 +17,7 @@ module.exports = {
       username: "root",
       password: null,
       database: "validades",
-      host: "mysql://be1d456ac82cd3:ad404816@us-cdbr-east-05.cleardb.net/heroku_506ea39d50d24bd?reconnect=true",
+      host: "127.0.0.1",
       dialect: "mysql"
     }
   }
