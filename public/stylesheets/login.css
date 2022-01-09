@@ -1,0 +1,44 @@
+body {
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    padding: 40px;
+    gap: 10px;
+    width: 400px;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    opacity: 0.90;
+    z-index: -1;
+    top: 0px;
+}
+
+.btn-entrar {
+    background-color: darkcyan;
+    border: none;
+    width: 100px;
+    color: #fff;
+}

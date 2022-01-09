@@ -3,9 +3,13 @@ const indexController = require('../controllers/indexController');
 const UserController = require('../controllers/UserController');
 const PromoterController = require('../controllers/PromoterController');
 const DataController = require('../controllers/DataController');
+const AuthController = require('../controllers/AuthController');
 var router = express.Router();
 
-/* GET home page. */
+/* auth */
+router.get('/login', AuthController.login);
+
+/* search pages */
 router.get('/', indexController.showHome);
 router.get('/home', indexController.showHome);
 
