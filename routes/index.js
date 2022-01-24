@@ -12,6 +12,7 @@ router.get('/login', AuthController.login);
 /* search pages */
 router.get('/', indexController.showHome);
 router.get('/home', indexController.showHome);
+router.get('/notify', indexController.showNotify);
 
 router.get('/usuarios', UserController.index);
 router.get('/usuarios/ver/:id', UserController.findById);
